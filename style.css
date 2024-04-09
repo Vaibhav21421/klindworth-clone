@@ -1,6 +1,6 @@
 @font-face {
     font-family: "larken";
-    src: url(./LarkenDEMO-Black.otf);
+    src: url(./LarkenDEMO-Regular.otf);
 }
 *{
 margin: 0;
@@ -18,17 +18,29 @@ height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: relative;
 }
 #pg1 h1{
     text-align: center;
     font-size: 10vw;
     color: #24262B;
-    font-family: "larkin";
+    font-weight: 600;
+    font-family: "larken";
     line-height: 20vh;
 }
 #pg1 h1 span{
     color: #AC9376;
+    font-weight: 600;
+}
+#pg1 img{
+    position: absolute;
+    top: 85%;
+
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+    object-position: center;
+    /* position: fixed; */
 }
 #pg2{
     height: 100vh;
@@ -37,13 +49,6 @@ height: 100%;
     text-align: center;
     
     
-}
-#pg2 img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    /* position: fixed; */
 }
 #pg3{
     height: 100vh;
