@@ -7,7 +7,7 @@
     src: url(./LarkenDEMO-Light.otf);
 }
 @font-face {
-    font-family: satoshi;
+    font-family: "satoshi";
     src: url(./Satoshi-Regular.woff);
 }
 *{
@@ -20,11 +20,24 @@ width: 100%;
 height: 100%;
 }
 
+#nav-switch-parent{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 4vw;
+    border-radius: 25px;
+    width: 9.7vw;
+    z-index: 11;
+    /* background-color: #AC9376; */
+    cursor: pointer;
+}
 #nav-switch{
     position: fixed;
     top: 5%;
     left: 50%;
     transform: translate(-50%,0);
+    display: none;
     height: 4vw;
     border-radius: 25px;
     width: 9.7vw;
@@ -36,33 +49,34 @@ height: 100%;
     flex-direction: column;
     cursor: pointer;
     transition: all ease, 0.3s;
-
     gap: 7px;
 }
 
 
 #nav-switch .line{
-    height: 2px;
+    height: 2.5px;
     transition: all ease, 0.3s;
     background-color: black;
     width: 35px;
 }
 #nav-pg{
-    height: 120vh;
+    height: 130vh;
     width: 100%;
     background-color: #24262B;
     position: absolute;
     z-index: 7;
-    top: 0;
-    
+    top: -130vh;
+    /* transition: ease-in,0.5s; */
+    transition: all ease-out, 0.5s;
 
 }
 #nav-pg #part-1{
-    height: 10vh;
-    background-color: crimson;
+    /* height: 10vh; */
+    /* background-color:crimson; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
 }
 #nav-pg #part-1 a{
     color:  #EDE9E2;
@@ -71,7 +85,140 @@ height: 100%;
     font-weight: 100;
     font-size: 1.3rem;
 }
+#nav-pg #part-2{
+    /* background-color: blueviolet; */
+    padding-left: 9vw;
+    padding-top: 2vw;
+}
+#nav-pg #part-2 h1{
+    font-size: 4rem;
+    font-family: larken;
+    font-weight: 600;
+    line-height: 4.5vw;
+    /* transition: all ease, 0.4s; */
+    cursor: pointer;
+    color: #EDE9E2;
+}
+#nav-pg #part-2 h1:hover{
 
+    color: rgb(172, 147, 118);
+}
+#nav-pg #part-3{
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+#nav-pg #part-3 #part-3-1{
+    display: flex;
+    /* background-color: brown; */
+    /* align-self: center; */
+    justify-content: space-between;
+}
+#nav-pg #part-3 #part-3-1 #part-3-11{
+    text-align: left;
+    /* background-color: teal; */
+    padding-left: 9vw;
+    padding-top: 5vw;
+
+}
+#nav-pg #part-3 #part-3-1 #part-3-11 h3{
+    color: #AC9376;
+    font-family: satoshi;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+#nav-pg #part-3 #part-3-1 #part-3-11 p{
+    font-family: satoshi;
+    font-weight: 300;
+    color: #EDE9E2;
+    font-size: 1.4rem;
+}
+#nav-pg #part-3 #part-3-1 #part-3-12{
+    text-align: left;
+    /* background-color: rgba(0, 255, 255, 0.449); */
+    padding-left: 9vw;
+    padding-top: 5vw;
+    margin-right: 40vw;
+}
+#nav-pg #part-3 #part-3-1 #part-3-12 h3{
+    color: #AC9376;
+    font-family: satoshi;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+#nav-pg #part-3 #part-3-1 #part-3-12 p{
+    font-family: satoshi;
+    font-weight: 300;
+    color: #EDE9E2;
+    font-size: 1.4rem;   
+}
+#nav-pg #part-3 #part-3-2{
+    display: flex;
+    /* background-color: blanchedalmond; */
+    padding-left: 9vw;
+    padding-right: 40vw;
+    padding-top: 5vw;
+    justify-content: space-between;
+}
+#nav-pg #part-3 #part-3-2 #part-3-21{
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+}
+#nav-pg #part-3 #part-3-2 #part-3-21 h6{
+    font-size: 1.4rem;
+    font-weight: 200;
+    font-family: satoshi;
+    color: #EDE9E2;
+}
+#nav-pg #part-3 #part-3-2 #part-3-21 h6 i{
+    color: #AC9376;
+}
+#nav-pg #part-3 #part-3-2 #part-3-21 p{
+    font-family: satoshi;
+    font-weight: 300;
+    color: #9C9B99;
+
+    font-size: 1.4rem;  
+}
+#nav-pg #part-3 #part-3-2 #part-3-22{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(0, 0, 255, 0.586); */
+}
+#nav-pg #part-3 #part-3-2 #part-3-22 h6{
+    font-size: 1.4rem;
+    font-weight: 200;
+    font-family: satoshi;
+    color: #EDE9E2;
+}
+#nav-pg #part-3 #part-3-2 #part-3-22 h6 i{
+    color: #AC9376;
+}
+#nav-pg #part-3 #part-3-2 #part-3-22 p{
+    font-family: satoshi;
+    font-weight: 300;
+    color: #9C9B99;
+
+    font-size: 1.4rem;  
+}
+#nav-pg #part-3 #part-3-2 #part-3-23{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(78, 78, 225, 0.335); */
+}
+#nav-pg #part-3 #part-3-2 #part-3-23 h6{
+    font-size: 1.4rem;
+    font-weight: 200;
+    font-family: satoshi;
+    color: #EDE9E2;
+}
+#nav-pg #part-3 #part-3-2 #part-3-23 p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    font-family: satoshi;
+    color: #EDE9E2;
+}
 #pg1 nav{
     position: absolute;
     top: 0;
@@ -81,7 +228,7 @@ height: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
-    z-index: 10;
+    /* z-index: 7; */
 
 }
 #pg1 nav i {
